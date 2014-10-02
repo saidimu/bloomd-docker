@@ -19,6 +19,9 @@ RUN \
   mv /tmp/bloomd/bloomd /usr/local/bin/ && \
   rm -rf /tmp/bloomd
 
+# Define mountable data folder
+VOLUME /data
+
 # Define working directory.
 WORKDIR /data
 
