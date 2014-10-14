@@ -6,6 +6,8 @@
 
 # Pull base image.
 FROM dockerfile/ubuntu
+MAINTAINER Said Apale saidimu@gmail.com
+
 
 # Install bloomd.
 RUN \
@@ -26,6 +28,7 @@ VOLUME /data
 WORKDIR /data
 
 # Copy default conf file to mountable folder
+RUN mkdir -p /data/
 ADD bloomd.conf /data/
 
 # Define default command.
