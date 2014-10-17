@@ -9,7 +9,7 @@ A Docker image for [Armon's bloomd](https://github.com/armon/bloomd), a C networ
 docker run -d -p 8673:8673 saidimu/bloomd:v0.7.4
 ```
 
-bloomd is now listening on port 8673 of your localhost.
+bloomd is now listening on port `8673` of your localhost.
 
 #### Getting Started with fig
 
@@ -21,7 +21,7 @@ fig up -d
 fig logs
 ```
 
-bloomd is now listening on port 8673 of your localhost.
+bloomd is now listening on port `8673` of your localhost.
 
 #### Attach persistent/shared directories using host-mounted volumes
 
