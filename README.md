@@ -25,7 +25,7 @@ bloomd is now listening on port `8673` of your localhost.
 
 #### Attach persistent/shared directories using host-mounted volumes
 
-  1. Create a mountable data directory `<data-dir>` on the host.
+  1. Create a mountable data directory `$DATA_DIR` on the host.
 
   2. Create a [bloomd config file](https://github.com/armon/bloomd#configuration-options) at `$DATA_DIR/bloomd.conf`.
 
