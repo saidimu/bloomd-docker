@@ -27,23 +27,23 @@ bloomd is now listening on port `8673` of your localhost.
 
   1. Create a mountable data directory `<data-dir>` on the host.
 
-  2. Create a [bloomd config file](https://github.com/armon/bloomd#configuration-options) at `<data-dir>/bloomd.conf`.
+  2. Create a [bloomd config file](https://github.com/armon/bloomd#configuration-options) at `$DATA_DIR/bloomd.conf`.
 
-    ```ini
-    # Settings for bloomd
-    [bloomd]
-    tcp_port = 8673
-    data_dir = /data/bloomd
-    log_level = INFO
-    flush_interval = 300
-    workers = 2
-    ```
+```ini
+# Settings for bloomd
+[bloomd]
+tcp_port = 8673
+data_dir = /data/bloomd
+log_level = INFO
+flush_interval = 300
+workers = 2
+```
 
   3. Start a container by mounting the data directory on the host to /data in the container:
 
-    ```sh
-    docker run -d -p 8673:8673 -v <data-dir>:/data -v <data-dir>/bloomd.conf:/etc/bloomd/bloomd.conf saidimu/bloomd:v0.7.4
-    ```
+```bash
+docker run -d -p 8673:8673 -v "$DATA_DIR":/data -v "$DATA_DIR"/bloomd.conf:/etc/bloomd/bloomd.conf saidimu/bloomd:v0.7.4
+```
 
 #### Using fig with data-only containers
 
