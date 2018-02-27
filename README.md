@@ -42,7 +42,7 @@ bloomd is now listening on port `8673` of your localhost.
   3. Start a container by mounting the data directory on the host to /data in the container:
 
     ```sh
-    docker run -d -p 8673 -v <data-dir>:/data saidimu/bloomd:v0.7.4
+    docker run -d -p 8673:8673 -v <data-dir>:/data -v <data-dir>/bloomd.conf:/etc/bloomd/bloomd.conf saidimu/bloomd:v0.7.4
     ```
 
 #### Using fig with data-only containers
